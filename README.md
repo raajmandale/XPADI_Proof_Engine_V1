@@ -106,130 +106,138 @@ It is centered on **survivability outcome**.
 
 ## 🚀 60-Second Quickstart
 
-### 1️⃣ Clone
+### ⚡ Setup & Run (Fast Path)
 
 ```bash
 git clone https://github.com/raajmandale/XPADI_Proof_Engine_V1.git
 cd XPADI_Proof_Engine_V1
-2️⃣ Install
 pip install -r requirements.txt
-3️⃣ Run
 python run.py
-4️⃣ Open
+🌐 Open UI
 http://127.0.0.1:8000
-🧪 Example Output
+🧪 Live Execution Output
 [SAFE MODE] Original file protected
 
-Creating internal proof state...
-Fragmenting...
-Encrypting...
-Simulating attack...
+→ Creating internal proof state...
+→ Fragmenting...
+→ Encrypting...
+→ Simulating attack...
 
-Reconstructing file...
-Verifying integrity...
+→ Reconstructing file...
+→ Verifying integrity...
 
 SUCCESS: DATA MATCHED
 FINAL RESULT: ATTACK ≠ DATA LOSS
 🧬 Proof Architecture
-<p align="center"> <img src="./assets/architecture.svg" width="900" alt="XPADI Architecture"> </p>
-Stage	Responsibility
-Source	Original file remains untouched
-Protection	Internal survivability state is created
-Attack	Controlled disruption is applied
-Reconstruction	File is rebuilt deterministically
-Verification	Hash integrity is validated
+<p align="center"> <img src="./assets/architecture.svg" width="900"> </p>
+Stage	Function
+🟢 Source	Original file remains untouched
+🔵 Protection	Survivability state created
+🔴 Attack	Controlled disruption injected
+🟡 Reconstruction	Deterministic rebuild
+🟣 Verification	Hash integrity validated
 🔄 Survivability Flow
-<p align="center"> <img src="./assets/flow.svg" width="900" alt="XPADI Survivability Flow"> </p>
-Source
-↓
-Protected State
-↓
-Attack Simulation
-↓
-Reconstruction
-↓
-Integrity Verification
-🔬 What This Repo Proves
+<p align="center"> <img src="./assets/flow.svg" width="900"> </p>
+SOURCE
+  ↓
+PROTECTED STATE
+  ↓
+ATTACK SIMULATION
+  ↓
+RECONSTRUCTION
+  ↓
+INTEGRITY VERIFICATION
+🔬 What XPADI Actually Proves
 
-This repo proves that:
+✔ Data is never directly exposed
+✔ Attack affects only derived state
+✔ Reconstruction is mathematically deterministic
+✔ Integrity validation is absolute
+✔ Outcome survives disruption
 
-✅ the original file remains untouched
-✅ attack is executed only on protected state
-✅ reconstruction is deterministic
-✅ integrity is validated through hashing
-✅ outcome survives disruption
 ⚙️ Execution Model
 
-XPADI currently operates in Safe Mode Simulation:
+XPADI operates in a controlled proof environment:
 
-source file is sealed
-internal working state is created
-disruption is applied to internal state only
-reconstruction pipeline executes
-output is verified against original integrity
-📈 Output Guarantee
+🛡 Source is sealed
+🧠 Internal survivability state is generated
+💥 Attack is injected on internal state only
+♻ Reconstruction engine resolves data graph
+✅ Integrity is verified against original
+📊 Output Guarantee
 hash(original) == hash(reconstructed)
 
 If true:
 
-<p align="center"> <b>ATTACK ≠ DATA LOSS</b> </p>
+<p align="center"> <b>⚡ ATTACK ≠ DATA LOSS</b> </p>
 🗂️ Project Structure
 XPADI_Proof_Engine_V1/
 │
-├── app/              # UI + orchestration
-├── assets/           # banner / architecture / flow / preview gif
-├── core/             # fragment / encrypt / reconstruct / verify
-├── data/             # runtime workspace
-├── docs/             # flagship HTML experience
-├── logs/             # runtime logs
-├── templates/        # Python-served HTML templates
-├── tests/            # validation notes
+├── app/           → UI + orchestration layer
+├── core/          → fragment / encrypt / reconstruct / verify
+├── assets/        → SVG + GIF + visuals
+├── docs/          → flagship demo UI
+├── templates/     → backend HTML views
+├── logs/          → execution logs
+├── data/          → runtime workspace
 │
 ├── run.py
 ├── requirements.txt
-├── repo_manifest.json
 └── README.md
 ⚖️ System Comparison
-System	Focus	Limitation
+System	Approach	Limitation
 Backup	Copy	Needs restore
-RAID	Hardware resilience	Limited failure scope
-Recovery Tools	Reconstruction	Often uncertain
-XPADI	Survivability logic	Proof-driven outcome
-🔮 Strategic Position
-Past
-
-Protects against:
-
-deletion
-disk failure
-corruption
-Present
-
-Demonstrates:
-
+RAID	Redundancy	Limited failure scope
+Recovery Tools	Guesswork rebuild	Uncertain
+🟢 XPADI	Survivability proof	Deterministic outcome
+🔮 Strategic Direction
+🕰 Past
+deletion protection
+disk failure recovery
+corruption handling
+⚡ Present
 survivability proof
 deterministic reconstruction
 integrity validation
-Future
-
-Aligns with:
-
-DNA storage
-5D glass storage
-AI memory systems
-survivability-native architectures
+🚀 Future
+AI-native memory systems
+DNA / 5D storage alignment
+survivability-first architectures
 📄 Research Paper
-<p align="center"> <a href="https://zenodo.org/records/19500143"> <img src="https://img.shields.io/badge/Open-Zenodo_Record-5C2D91?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Zenodo Record"> </a> </p>
+<p align="center"> <a href="https://zenodo.org/records/19500143"> <img src="https://img.shields.io/badge/Open-Zenodo_Record-6C2BD9?style=for-the-badge&logo=readthedocs&logoColor=white"> </a> </p>
 👤 Author
-<p align="center"> <b>Raaj Mandale</b><br> Founder & Systems Architect<br> ERANEST Technoware Pvt Ltd </p> <p align="center"> <a href="https://raajmandale.in"> <img src="https://img.shields.io/badge/Website-raajmandale.in-111827?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"> </a> </p>
+<p align="center">
+🚀 Raaj Mandale
+
+Founder & Systems Architect
+
+🏢 ERANEST Technoware Pvt Ltd
+🌐 https://raajmandale.in
+
+</p>
 📜 License
-<p align="center"> <b>MIT License</b> </p> <p align="center"> ✅ Free to use &nbsp;&nbsp; ✅ Modify &nbsp;&nbsp; ✅ Distribute </p>
+<p align="center">
+
+🧾 MIT License
+
+✔ Free to use
+✔ Modify
+✔ Distribute
+
+</p>
 ⚡ Final Statement
+<p align="center">
+❌ XPADI is NOT
 
-XPADI is not a backup system.
+• Backup system
+• Recovery tool
+• Storage layer
 
-XPADI is not a recovery tool.
+✅ XPADI IS
 
-XPADI is a proof that data can survive disruption itself.
+• Survivability engine
+• Proof system
+• Data continuity model
 
-<p align="center"> <b>🚀 ATTACK ≠ DATA LOSS</b> </p>
+🚀 ATTACK ≠ DATA LOSS
+</p> ```
