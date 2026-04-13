@@ -1,0 +1,181 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#04070f"></stop>
+      <stop offset="50%" stop-color="#0a1322"></stop>
+      <stop offset="100%" stop-color="#0d1d31"></stop>
+    </linearGradient>
+
+    <linearGradient id="blueLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6fb0ff"></stop>
+      <stop offset="100%" stop-color="#4f8dff"></stop>
+    </linearGradient>
+
+    <linearGradient id="greenLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#42e6a4"></stop>
+      <stop offset="100%" stop-color="#00c47a"></stop>
+    </linearGradient>
+
+    <linearGradient id="orangeLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffbf66"></stop>
+      <stop offset="100%" stop-color="#ff8e3c"></stop>
+    </linearGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <filter id="panelShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.35"></feDropShadow>
+    </filter>
+
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#17314f" stroke-width="1"></path>
+    </pattern>
+
+    <style>
+      .title { font: 700 42px Inter, Segoe UI, Arial, sans-serif; fill: #eef5ff; }
+      .sub   { font: 400 18px Inter, Segoe UI, Arial, sans-serif; fill: #9eb2d3; }
+      .tag   { font: 700 13px Inter, Segoe UI, Arial, sans-serif; letter-spacing: 1.6px; fill: #6fb0ff; }
+      .head  { font: 700 24px Inter, Segoe UI, Arial, sans-serif; fill: #ffffff; }
+      .body  { font: 500 15px Inter, Segoe UI, Arial, sans-serif; fill: #9bb0cf; }
+      .mini  { font: 600 13px Inter, Segoe UI, Arial, sans-serif; fill: #9bb0cf; }
+      .core  { font: 800 18px Inter, Segoe UI, Arial, sans-serif; fill: #ffffff; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#bg)"></rect>
+  <rect width="1600" height="900" fill="url(#grid)" opacity="0.16"></rect>
+
+  <!-- Ambient glow -->
+  <circle cx="1280" cy="180" r="170" fill="#123d6f" opacity="0.18" filter="url(#softGlow)">
+    <animate attributeName="r" values="150;185;150" dur="7s" repeatCount="indefinite"></animate>
+  </circle>
+  <circle cx="270" cy="770" r="180" fill="#164c6b" opacity="0.12" filter="url(#softGlow)">
+    <animate attributeName="r" values="165;195;165" dur="8s" repeatCount="indefinite"></animate>
+  </circle>
+
+  <!-- Title -->
+  <text x="70" y="72" class="title">XPADI Proof Engine — Architecture View</text>
+  <text x="70" y="104" class="sub">A serious local survivability proof application for disruption, controlled reconstruction, and outcome validation</text>
+
+  <!-- Layer Cards -->
+  <g transform="translate(90,170)">
+    <!-- APP -->
+    <rect x="0" y="0" width="300" height="190" rx="26" fill="#0e1828" stroke="#28445f" stroke-width="1.8" filter="url(#panelShadow)"></rect>
+    <text x="26" y="38" class="tag">APP LAYER</text>
+    <text x="26" y="82" class="head">UI Surface</text>
+    <text x="26" y="120" class="body">• Select file</text>
+    <text x="26" y="148" class="body">• Run full proof</text>
+    <text x="26" y="176" class="body">• Show recovery result</text>
+
+    <!-- CONTROL -->
+    <rect x="360" y="0" width="320" height="190" rx="26" fill="#10233b" stroke="#5b97ff" stroke-width="2.2" filter="url(#panelShadow)"></rect>
+    <text x="386" y="38" class="tag">CONTROL LAYER</text>
+    <text x="386" y="82" class="head">Orchestration Engine</text>
+    <text x="386" y="120" class="body">• Protect</text>
+    <text x="386" y="148" class="body">• Simulate attack</text>
+    <text x="386" y="176" class="body">• Recover + verify</text>
+
+    <!-- CORE -->
+    <rect x="740" y="0" width="320" height="190" rx="26" fill="#0f243a" stroke="#42e6a4" stroke-width="2.2" filter="url(#panelShadow)"></rect>
+    <text x="766" y="38" class="tag">CORE LAYER</text>
+    <text x="766" y="82" class="head">Survivability Logic</text>
+    <text x="766" y="120" class="body">• Fragment</text>
+    <text x="766" y="148" class="body">• Encrypt</text>
+    <text x="766" y="176" class="body">• Store / Reconstruct</text>
+
+    <!-- PROOF -->
+    <rect x="1120" y="0" width="280" height="190" rx="26" fill="#21172a" stroke="#ff9960" stroke-width="2.2" filter="url(#panelShadow)"></rect>
+    <text x="1146" y="38" class="tag">PROOF LAYER</text>
+    <text x="1146" y="82" class="head">Outcome</text>
+    <text x="1146" y="120" class="body">• Attack event</text>
+    <text x="1146" y="148" class="body">• Recovery success</text>
+    <text x="1146" y="176" class="body">• Hash match</text>
+
+    <!-- Flow lines -->
+    <path d="M300 95 L360 95" stroke="url(#blueLine)" stroke-width="4" fill="none"></path>
+    <path d="M680 95 L740 95" stroke="url(#greenLine)" stroke-width="4" fill="none"></path>
+    <path d="M1060 95 L1120 95" stroke="url(#orangeLine)" stroke-width="4" fill="none"></path>
+
+    <!-- Data pulses -->
+    <circle r="6" fill="#6fb0ff" filter="url(#softGlow)">
+      <animateMotion dur="3s" repeatCount="indefinite">
+        <mpath href="#p1"></mpath>
+      </animateMotion>
+    </circle>
+    <path id="p1" d="M300 95 L360 95" fill="none"></path>
+
+    <circle r="6" fill="#42e6a4" filter="url(#softGlow)">
+      <animateMotion dur="3s" begin="1s" repeatCount="indefinite">
+        <mpath href="#p2"></mpath>
+      </animateMotion>
+    </circle>
+    <path id="p2" d="M680 95 L740 95" fill="none"></path>
+
+    <circle r="6" fill="#ffb25c" filter="url(#softGlow)">
+      <animateMotion dur="3s" begin="2s" repeatCount="indefinite">
+        <mpath href="#p3"></mpath>
+      </animateMotion>
+    </circle>
+    <path id="p3" d="M1060 95 L1120 95" fill="none"></path>
+  </g>
+
+  <!-- Central execution chain -->
+  <g transform="translate(170,460)">
+    <rect x="0" y="0" width="1260" height="250" rx="28" fill="#0c182a" stroke="#203650" stroke-width="1.8" filter="url(#panelShadow)"></rect>
+    <text x="36" y="42" class="tag">PROOF EXECUTION CHAIN</text>
+    <text x="36" y="82" class="head">Input → Fragment → Encrypt → Distribute → Attack → Recover → Verify</text>
+
+    <!-- Step nodes -->
+    <g transform="translate(34,120)">
+      <rect x="0" y="0" width="140" height="78" rx="16" fill="#111f31" stroke="#2c4c75"></rect>
+      <text x="70" y="46" text-anchor="middle" class="core">INPUT</text>
+
+      <rect x="170" y="0" width="160" height="78" rx="16" fill="#102740" stroke="#5b97ff"></rect>
+      <text x="250" y="46" text-anchor="middle" class="core">FRAGMENT</text>
+
+      <rect x="360" y="0" width="160" height="78" rx="16" fill="#102740" stroke="#5b97ff"></rect>
+      <text x="440" y="46" text-anchor="middle" class="core">ENCRYPT</text>
+
+      <rect x="550" y="0" width="170" height="78" rx="16" fill="#102740" stroke="#42e6a4"></rect>
+      <text x="635" y="46" text-anchor="middle" class="core">DISTRIBUTE</text>
+
+      <rect x="750" y="0" width="140" height="78" rx="16" fill="#26172a" stroke="#ff9960"></rect>
+      <text x="820" y="46" text-anchor="middle" class="core">ATTACK</text>
+
+      <rect x="920" y="0" width="150" height="78" rx="16" fill="#102740" stroke="#42e6a4"></rect>
+      <text x="995" y="46" text-anchor="middle" class="core">RECOVER</text>
+
+      <rect x="1100" y="0" width="140" height="78" rx="16" fill="#102740" stroke="#6fb0ff"></rect>
+      <text x="1170" y="46" text-anchor="middle" class="core">VERIFY</text>
+
+      <!-- Base lines -->
+      <path d="M140 39 L170 39" stroke="#5b97ff" stroke-width="4" fill="none"></path>
+      <path d="M330 39 L360 39" stroke="#5b97ff" stroke-width="4" fill="none"></path>
+      <path d="M520 39 L550 39" stroke="#42e6a4" stroke-width="4" fill="none"></path>
+      <path d="M720 39 L750 39" stroke="#ff9960" stroke-width="4" fill="none"></path>
+      <path d="M890 39 L920 39" stroke="#42e6a4" stroke-width="4" fill="none"></path>
+      <path d="M1070 39 L1100 39" stroke="#6fb0ff" stroke-width="4" fill="none"></path>
+
+      <!-- Animated travel -->
+      <circle r="5.5" fill="#6fb0ff" filter="url(#softGlow)">
+        <animateMotion dur="6s" repeatCount="indefinite">
+          <mpath href="#flow1"></mpath>
+        </animateMotion>
+      </circle>
+      <path id="flow1" d="M140 39 L170 39 L330 39 L360 39 L520 39 L550 39 L720 39 L750 39 L890 39 L920 39 L1070 39 L1100 39" fill="none"></path>
+
+    </g>
+
+    <text x="36" y="220" class="mini">The visible proof surface demonstrates survivability outcome without disclosing the deeper XPADI mechanism.</text>
+    <text x="36" y="242" class="mini">What users see: disruption, attack, and successful reconstruction.</text>
+  </g>
+
+</svg>

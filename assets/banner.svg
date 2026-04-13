@@ -1,0 +1,108 @@
+<svg width="1600" height="700" viewBox="0 0 1600 700" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#04070f"></stop>
+    <stop offset="100%" stop-color="#0b1d34"></stop>
+  </linearGradient>
+
+  <linearGradient id="flowBlue">
+    <stop offset="0%" stop-color="#6fb0ff"></stop>
+    <stop offset="100%" stop-color="#4f8dff"></stop>
+  </linearGradient>
+
+  <linearGradient id="flowGreen">
+    <stop offset="0%" stop-color="#42e6a4"></stop>
+    <stop offset="100%" stop-color="#00c47a"></stop>
+  </linearGradient>
+
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="6" result="blur"></feGaussianBlur>
+    <feMerge>
+      <feMergeNode in="blur"></feMergeNode>
+      <feMergeNode in="SourceGraphic"></feMergeNode>
+    </feMerge>
+  </filter>
+
+  <style>
+    .title { font:700 56px Segoe UI; fill:white; }
+    .sub { font:400 20px Segoe UI; fill:#9fb4d4; }
+    .node { fill:#0f2036; stroke:#2c4c75; stroke-width:2; }
+    .text { font:600 16px Segoe UI; fill:white; }
+    .statement { font:800 34px Segoe UI; fill:white; }
+  </style>
+</defs>
+
+<!-- Background -->
+<rect width="1600" height="700" fill="url(#bg)"></rect>
+
+<!-- Animated Grid -->
+<g opacity="0.15">
+  <path d="M0 0 L1600 0" stroke="#1a3a5a">
+    <animate attributeName="stroke-dashoffset" values="0;100" dur="6s" repeatCount="indefinite"></animate>
+  </path>
+</g>
+
+<!-- LEFT TEXT -->
+<g transform="translate(80,120)">
+  <text class="title">Attack success</text>
+  <text y="70" class="title">does not require</text>
+  <text y="140" class="title">data loss.</text>
+
+  <text y="220" class="sub">
+    XPADI proves survivability under real disruption conditions
+  </text>
+
+  <text y="320" class="statement">
+    ATTACK ≠ DATA LOSS
+  </text>
+</g>
+
+<!-- FLOW SYSTEM -->
+<g transform="translate(800,200)">
+
+  <!-- Nodes -->
+  <rect x="0" y="0" width="140" height="70" rx="14" class="node"></rect>
+  <text x="70" y="42" text-anchor="middle" class="text">FILE</text>
+
+  <rect x="200" y="0" width="160" height="70" rx="14" class="node"></rect>
+  <text x="280" y="42" text-anchor="middle" class="text">FRAGMENT</text>
+
+  <rect x="420" y="0" width="160" height="70" rx="14" class="node"></rect>
+  <text x="500" y="42" text-anchor="middle" class="text">ENCRYPT</text>
+
+  <rect x="640" y="0" width="140" height="70" rx="14" class="node"></rect>
+  <text x="710" y="42" text-anchor="middle" class="text">STORE</text>
+
+  <rect x="420" y="140" width="160" height="80" rx="14" fill="#2a1820" stroke="#ff7d7d"></rect>
+  <text x="500" y="185" text-anchor="middle" class="text">ATTACK</text>
+
+  <rect x="640" y="140" width="140" height="80" rx="14" class="node"></rect>
+  <text x="710" y="185" text-anchor="middle" class="text">RECOVER</text>
+
+  <!-- Animated Data Flow -->
+  <circle r="5" fill="#6fb0ff" filter="url(#glow)">
+    <animateMotion dur="4s" repeatCount="indefinite">
+      <mpath href="#path1"></mpath>
+    </animateMotion>
+  </circle>
+
+  <path id="path1" d="M140 35 L200 35 L360 35 L420 35 L580 35 L640 35" fill="none"></path>
+
+  <circle r="5" fill="#42e6a4" filter="url(#glow)">
+    <animateMotion dur="4s" begin="2s" repeatCount="indefinite">
+      <mpath href="#path2"></mpath>
+    </animateMotion>
+  </circle>
+
+  <path id="path2" d="M500 80 L500 140 L640 180" fill="none"></path>
+
+</g>
+
+<!-- BIG PULSE CORE -->
+<circle cx="1200" cy="350" r="60" stroke="#42e6a4" stroke-width="2" fill="none">
+  <animate attributeName="r" values="50;80;50" dur="3s" repeatCount="indefinite"></animate>
+  <animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite"></animate>
+</circle>
+
+</svg>

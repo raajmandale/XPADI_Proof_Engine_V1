@@ -1,0 +1,19 @@
+{
+  "project": "XPADI Proof Engine (V1)",
+  "status": "locked_execution_base",
+  "purpose": "Proof-first local survivability demo application",
+  "canonical_flow": [
+    "select_file",
+    "protect",
+    "simulate_attack",
+    "recover",
+    "verify"
+  ],
+  "doctrine": [
+    "CFAR",
+    "FSCF-FDIR",
+    "DriftKill",
+    "FIWE",
+    "JANVIX"
+  ]
+}

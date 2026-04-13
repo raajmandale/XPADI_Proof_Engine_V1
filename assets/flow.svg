@@ -1,0 +1,42 @@
+<svg width="1400" height="520" viewBox="0 0 1400 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flowbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07101d"/>
+      <stop offset="100%" stop-color="#0f1d31"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title{font:700 34px Inter,Segoe UI,Arial,sans-serif; fill:#f1f6ff}
+      .sub{font:400 16px Inter,Segoe UI,Arial,sans-serif; fill:#99acd0}
+      .label{font:700 17px Inter,Segoe UI,Arial,sans-serif; fill:#eef5ff}
+      .mini{font:500 13px Inter,Segoe UI,Arial,sans-serif; fill:#93a7c7}
+    </style>
+  </defs>
+  <rect width="1400" height="520" fill="url(#flowbg)"/>
+  <text x="60" y="62" class="title">XPADI Survivability Flow</text>
+  <text x="60" y="90" class="sub">Outcome-first demonstration path from original file to verified recovery</text>
+  <g transform="translate(55,170)">
+    <g transform="translate(0,0)"><rect x="0" y="0" rx="18" ry="18" width="170" height="104" fill="#101b2b" stroke="#29425f" filter="url(#shadow)"/><text x="85" y="46" text-anchor="middle" class="label">FILE</text><text x="85" y="72" text-anchor="middle" class="mini">original input</text></g>
+    <g transform="translate(220,0)"><rect x="0" y="0" rx="18" ry="18" width="170" height="104" fill="#102740" stroke="#5b97ff" filter="url(#shadow)"/><text x="85" y="46" text-anchor="middle" class="label">FRAGMENT</text><text x="85" y="72" text-anchor="middle" class="mini">deterministic split</text></g>
+    <g transform="translate(440,0)"><rect x="0" y="0" rx="18" ry="18" width="170" height="104" fill="#102740" stroke="#5b97ff" filter="url(#shadow)"/><text x="85" y="46" text-anchor="middle" class="label">ENCRYPT</text><text x="85" y="72" text-anchor="middle" class="mini">per-fragment lock</text></g>
+    <g transform="translate(660,0)"><rect x="0" y="0" rx="18" ry="18" width="170" height="104" fill="#102740" stroke="#47ddac" filter="url(#shadow)"/><text x="85" y="46" text-anchor="middle" class="label">DISTRIBUTE</text><text x="85" y="72" text-anchor="middle" class="mini">multi-bucket state</text></g>
+    <g transform="translate(880,0)"><rect x="0" y="0" rx="18" ry="18" width="170" height="104" fill="#26172a" stroke="#ff9960" filter="url(#shadow)"/><text x="85" y="46" text-anchor="middle" class="label">ATTACK</text><text x="85" y="72" text-anchor="middle" class="mini">delete / corrupt / move</text></g>
+    <g transform="translate(1100,0)"><rect x="0" y="0" rx="18" ry="18" width="200" height="104" fill="#102740" stroke="#58f0c1" filter="url(#shadow)"/><text x="100" y="46" text-anchor="middle" class="label">RECOVER + VERIFY</text><text x="100" y="72" text-anchor="middle" class="mini">hash-matched output</text></g>
+    <path d="M170 52 L220 52" stroke="#5b97ff" stroke-width="4" />
+    <path d="M390 52 L440 52" stroke="#5b97ff" stroke-width="4" />
+    <path d="M610 52 L660 52" stroke="#47ddac" stroke-width="4" />
+    <path d="M830 52 L880 52" stroke="#ff9960" stroke-width="4" />
+    <path d="M1050 52 L1100 52" stroke="#47ddac" stroke-width="4" />
+    <circle cx="195" cy="52" r="5" fill="#6fb0ff"><animate attributeName="cx" values="195;215;195" dur="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="635" cy="52" r="5" fill="#58f0c1"><animate attributeName="cx" values="635;655;635" dur="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="855" cy="52" r="5" fill="#ffb25c"><animate attributeName="cx" values="855;875;855" dur="1.8s" repeatCount="indefinite"/></circle>
+  </g>
+  <g transform="translate(60,350)">
+    <rect x="0" y="0" rx="20" ry="20" width="1280" height="110" fill="#0d182a" stroke="#203650"/>
+    <text x="40" y="44" class="mini">FINAL OUTCOME</text>
+    <text x="40" y="82" style="font:800 30px Inter,Segoe UI,Arial,sans-serif; fill:#ffffff">ATTACK ≠ DATA LOSS</text>
+    <text x="720" y="82" style="font:500 18px Inter,Segoe UI,Arial,sans-serif; fill:#8fa6ca">Storage disrupted. Truth still reconstructable.</text>
+  </g>
+</svg>
