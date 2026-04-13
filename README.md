@@ -1,153 +1,223 @@
-🚀 XPADI — Survivability Proof Engine V1
+<p align="center">
+  <img src="assets/xpadi-banner.svg" width="1000">
+</p>
 
-“Attack / deletion / corruption ≠ permanent data loss.”
+<h1 align="center">XPADI</h1>
 
-🧠 What is XPADI?
+<p align="center">
+<b>Survivability Proof Engine</b><br>
+Outcome-preserving data systems across attack, failure, and unknown states
+</p>
 
-XPADI (eXtended Persistent Autonomous Data Integrity) is not backup.
-Not RAID. Not recovery.
+<p align="center">
 
-It is a Survivability-Governed Data System (SGDS) —
-a new class of systems focused on:
+![status](https://img.shields.io/badge/status-proof--engine-blue)
+![system](https://img.shields.io/badge/system-SGDS-green)
+![mode](https://img.shields.io/badge/mode-safe--simulation-purple)
+![version](https://img.shields.io/badge/version-v1-orange)
 
-🧬 Data survivability across failure, attack, and unknown future states
+</p>
 
-⚡ Core Thesis
+---
 
-Traditional systems protect storage
-XPADI protects outcome
+# What is XPADI
 
-Backup → Restore if available
-RAID → Survive disk failure
-Recovery → Try to rebuild
+XPADI is a **Survivability-Governed Data System (SGDS)**.
 
-XPADI → Guarantees survivability logic
-🎯 What This Repo Proves
+It does not focus on storage.
 
-This repository contains a real, local, controlled proof application that demonstrates:
+It focuses on **outcome continuity**.
 
-🔬 Proof Flow
-📂 Select a file
-🔐 Create internal protected state (fragment + encrypt + distribute)
-💥 Simulate attack (delete / corruption on protected state)
-♻️ Reconstruct file
-🧾 Verify integrity (hash match)
-🧪 Final Result
+Traditional systems ask:
+→ “Can we store and recover data?”
 
-🚀 Attack ≠ Data Loss
+XPADI asks:
+→ “Can data survive disruption itself?”
 
-▶️ Run the Real Demo (Python App)
-🛠️ Setup
+---
+
+# Core Principle
+
+
+Attack / Deletion / Corruption ≠ Permanent Data Loss
+
+
+XPADI ensures that even after controlled disruption,  
+data remains **reconstructable and verifiable**.
+
+---
+
+# Why This Matters
+
+Modern data systems fail in critical ways:
+
+- Backup requires restore point  
+- RAID handles limited hardware failure  
+- Recovery tools are uncertain  
+- Corruption often leads to irreversible loss  
+
+XPADI introduces a different model:
+
+✔ survivability-first design  
+✔ deterministic reconstruction  
+✔ integrity-verified output  
+✔ failure-resilient data state  
+
+---
+
+# 🌐 System Positioning
+
+<p align="center">
+<img src="assets/xpadi-positioning-map.svg" width="900">
+</p>
+
+XPADI operates **above traditional storage systems**  
+and focuses on **data survivability across time and disruption layers**.
+
+---
+
+# 🚀 60-Second Quickstart
+
+### 1. Clone
+
+```bash
+git clone https://github.com/raajmandale/XPADI_Proof_Engine_V1.git
+cd XPADI_Proof_Engine_V1
+2. Install
 pip install -r requirements.txt
-▶️ Run
+3. Run
 python -m app.main
-🧾 What You Will See
-Original file remains untouched (Safe Mode)
-Internal protected proof state created
-Controlled attack executed
-File reconstructed
-Hash verification result
-🔥 SUCCESS: DATA MATCHED
-🚀 FINAL RESULT: ATTACK ≠ DATA LOSS
-🖥️ Demo Surfaces
-🧩 1. Real Engine (Primary)
-python -m app.main
-🌐 2. Flagship Command Surface (Explainer UI)
-python -m http.server 8000
+Example Output
+[SAFE MODE] Original file protected
 
-Open:
+Creating internal proof state...
+Fragmenting...
+Encrypting...
+Simulating attack...
 
-http://localhost:8000/docs/index.html
+Reconstructing file...
+Verifying integrity...
 
-⚠️ Note: HTML is a visual explainer layer, not the execution engine
+SUCCESS: DATA MATCHED
+FINAL RESULT: ATTACK ≠ DATA LOSS
+🧠 Proof Architecture
+<p align="center"> <img src="assets/xpadi-architecture.svg" width="900"> </p>
 
-🧬 Why XPADI is Different
-System Type	Focus	Limitation
-Backup	Copies	Needs restore point
-RAID	Hardware redundancy	Limited failure scope
-Recovery Tools	Reconstruction	Uncertain success
-🔥 XPADI	Survivability Logic	Outcome-driven
-🌍 Strategic Position
-🕰️ Past
-Protects against classical failure (disk loss, deletion)
-⚡ Present
-Survives corruption, attack, and state disruption
-🚀 Future
-Aligns with:
-🧬 DNA Storage
-🧊 5D Glass Storage
-🤖 AI Memory Systems
-🌐 Distributed Data Lifelines
-🧠 Architecture Snapshot
-Source File
-   ↓
-Fragment Engine
-   ↓
-Encryption Layer
-   ↓
-Distributed Storage (Simulated)
-   ↓
+XPADI is built as a controlled proof pipeline.
+
+Stage	Responsibility
+Source	Original file (never touched)
+Protection	Internal survivability state
+Attack	Controlled disruption
+Reconstruction	File rebuild
+Verification	Hash integrity validation
+🔄 Survivability Flow
+<p align="center"> <img src="assets/xpadi-flow.svg" width="900"> </p>
+
+Execution pipeline:
+
+Source
+↓
+Protected State
+↓
 Attack Simulation
-   ↓
-Reconstruction Engine
-   ↓
+↓
+Reconstruction
+↓
 Integrity Verification
-📂 Repository Structure
+
+🔬 What This Repo Proves
+
+This is not a theory repo.
+
+This repo proves:
+
+✔ Original file remains untouched
+✔ Attack is executed on protected state
+✔ Reconstruction is deterministic
+✔ Integrity is validated via hash
+✔ Outcome survives disruption
+
+⚙️ Execution Model
+
+XPADI operates in Safe Mode Simulation:
+
+Source file is sealed
+Internal working state is created
+Disruption is applied to internal state only
+Reconstruction pipeline executes
+Output is verified
+📊 Output Guarantee
+
+Final output must satisfy:
+
+hash(original) == hash(reconstructed)
+
+If true:
+
+ATTACK ≠ DATA LOSS
+📂 Project Structure
 XPADI_Proof_Engine_V1/
-├── app/              # UI launcher (main entry)
-├── core/             # Core logic (fragment, encrypt, reconstruct)
-├── data/             # Workspace / simulation data
-├── docs/             # Flagship HTML demo (explainer)
-├── assets/           # SVGs / visuals (optional)
-├── tests/            # Test notes
+│
+├── app/              # UI + orchestration
+├── core/             # fragment / encrypt / reconstruct / verify
+├── data/             # runtime workspace
+├── docs/             # flagship demo + explanation layer
+├── assets/           # diagrams + banners
+├── tests/            # validation notes
+│
 ├── README.md
 ├── requirements.txt
-📊 Research & Paper
+└── repo_manifest.json
+🔍 System Comparison
+System	Focus	Limitation
+Backup	Copy	Needs restore
+RAID	Hardware resilience	Limited failure
+Recovery Tools	Reconstruction	Uncertain
+XPADI	Survivability logic	Outcome-driven proof
+🧭 Strategic Position
+Past
 
-📄 XPADI Research Paper (Zenodo):
-👉 https://zenodo.org/records/19500143
+Protects against:
 
-🌐 Founder & Vision
+deletion
+disk failure
+corruption
+Present
 
-👤 Raaj Mandale
+Demonstrates:
+
+survivability proof
+deterministic reconstruction
+integrity validation
+Future
+
+Aligns with:
+
+DNA storage
+5D glass storage
+AI memory systems
+survivability-native architectures
+📄 Research Paper
+
+https://zenodo.org/records/19500143
+
+👤 Author
+
+Raaj Mandale
 Founder & Architect
-🏢 Eranest Technoware Pvt Ltd
+ERANEST Technoware Pvt Ltd
 
-🌐 Website:
-👉 https://raajmandale.in/
+🌐 https://raajmandale.in/
 
-🧬 Vision Statement
-
-XPADI is not solving “data storage”
-XPADI is solving data survivability across time
-
-🔥 Key Philosophy
-❌ Not storage-first
-❌ Not recovery-first
-❌ Not security-only
-✅ Outcome-first system
-✅ Failure-resilient logic layer
-✅ Future-aligned data architecture
-🧪 Current Scope (V1)
-Local proof application
-Controlled simulation only
-Single-node architecture
-Deterministic reconstruction
-Hash-based verification
-🚀 What Comes Next
-Multi-node distributed survivability
-Real-world fragment routing
-AI-assisted reconstruction
-Survivability telemetry layer
-Integration with next-gen storage mediums
-🛡️ License
+📄 License
 
 MIT License
 
-© 2026 — Raaj Mandale
-Founder & Architect, Eranest Technoware Pvt Ltd
+Final Statement
 
-⭐ Final Statement
+XPADI is not a backup system.
 
-This is not a demo of recovery.
-This is a proof of survivability.
+It is not a recovery tool.
+
+It is a proof that data can survive disruption itself.
