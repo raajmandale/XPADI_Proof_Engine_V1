@@ -112,130 +112,176 @@ Get XPADI running in less than a minute.
 
 ### 1. Clone the repository
 
-```bash
-git clone https://github.com/raajmandale/XPADI_Proof_Engine_V1.git
-cd XPADI_Proof_Engine_V1
-2. Install dependencies
-pip install -r requirements.txt
-3. Run the proof engine
-python run.py
-4. Open the interface
-http://127.0.0.1:8000
-🧪 Example Output
-[SAFE MODE] Original file protected
+git clone https://github.com/raajmandale/XPADI_Proof_Engine_V1.git  
+cd XPADI_Proof_Engine_V1  
 
-Creating internal proof state...
-Fragmenting...
-Encrypting...
-Simulating attack...
+---
 
-Reconstructing file...
-Verifying integrity...
+### 2. Install dependencies
 
-SUCCESS: DATA MATCHED
-FINAL RESULT: ATTACK ≠ DATA LOSS
-🧬 Architecture
-<p align="center"> <img src="./assets/architecture.svg" width="900"> </p>
+pip install -r requirements.txt  
 
-XPADI is built as a controlled survivability pipeline.
+---
 
-Stage	Responsibility
-Source	Original file remains untouched
-Protection	Internal survivability state is created
-Attack	Controlled disruption is applied
-Reconstruction	File is rebuilt deterministically
-Verification	Hash integrity is validated
-🔄 Survivability Flow
-<p align="center"> <img src="./assets/flow.svg" width="900"> </p>
+### 3. Run the proof engine
 
-Execution pipeline:
+python run.py  
 
-Source
-↓
-Protected State
-↓
-Attack Simulation
-↓
-Reconstruction
-↓
-Integrity Verification
-🔬 What This Repo Proves
+---
 
-This is not a theoretical system.
+### 4. Open the interface
+
+http://127.0.0.1:8000  
+
+---
+
+### Example Output
+
+[SAFE MODE] Original file protected  
+
+Creating internal proof state...  
+Fragmenting...  
+Encrypting...  
+Simulating attack...  
+
+Reconstructing file...  
+Verifying integrity...  
+
+SUCCESS: DATA MATCHED  
+FINAL RESULT: ATTACK ≠ DATA LOSS  
+
+---
+
+## 🧬 Architecture
+
+<p align="center">
+  <img src="./assets/architecture.svg" width="900">
+</p>
+
+XPADI operates as a controlled survivability pipeline:
+
+- Source remains untouched  
+- Protection layer creates internal state  
+- Attack is applied to derived state  
+- Reconstruction rebuilds deterministically  
+- Verification confirms integrity  
+
+---
+
+## 🔄 Survivability Flow
+
+<p align="center">
+  <img src="./assets/flow.svg" width="900">
+</p>
+
+Source → Protected State → Attack → Reconstruction → Verification  
+
+---
+
+## 🔬 What This Repo Proves
 
 XPADI demonstrates:
 
-Original data remains untouched
-Attack is applied only on protected state
-Reconstruction is deterministic
-Integrity is verified using hashing
-Final outcome survives disruption
-⚙️ Execution Model
+- Data is never directly exposed  
+- Disruption affects only internal state  
+- Reconstruction is deterministic  
+- Integrity validation is exact  
+- Final outcome survives disruption  
 
-XPADI operates in Safe Mode Simulation:
+---
 
-Source is sealed
-Internal survivability state is generated
-Attack is applied internally
-Reconstruction resolves data
-Output is verified
-📊 Output Guarantee
-hash(original) == hash(reconstructed)
+## ⚙️ Execution Model
+
+XPADI runs in a controlled proof environment:
+
+- Source is sealed  
+- Internal state is generated  
+- Attack is simulated internally  
+- Reconstruction resolves structure  
+- Output is verified  
+
+---
+
+## 📊 Output Guarantee
+
+hash(original) == hash(reconstructed)  
 
 If true:
 
-ATTACK ≠ DATA LOSS
+ATTACK ≠ DATA LOSS  
 
-📂 Project Structure
+---
+
+## 📂 Project Structure
+
 XPADI_Proof_Engine_V1/
-│
-├── app/            UI + orchestration
-├── core/           fragment / encrypt / reconstruct / verify
-├── assets/         SVG + GIF visuals
-├── docs/           demo interface
-├── templates/      backend HTML
-├── logs/           execution logs
-├── data/           runtime workspace
-│
-├── run.py
-├── requirements.txt
-└── README.md
-⚖️ System Comparison
-System	Focus	Limitation
-Backup	Copy	Needs restore
-RAID	Hardware redundancy	Limited scope
-Recovery Tools	Reconstruction	Uncertain
-XPADI	Survivability logic	Deterministic proof
-🔮 Strategic Direction
-Past
-deletion protection
-disk failure recovery
-corruption handling
-Present
-survivability proof
-deterministic reconstruction
-integrity validation
-Future
-AI-native memory systems
-advanced storage models
-survivability-first architectures
-📄 Research Paper
 
-https://zenodo.org/records/19500143
+- app → UI + orchestration  
+- core → processing engine  
+- assets → visuals  
+- docs → demo UI  
+- templates → HTML layer  
+- logs → runtime logs  
+- data → workspace  
 
-👤 Author
+run.py  
+requirements.txt  
+README.md  
 
-Raaj Mandale
-Founder — ERANEST Technoware Pvt Ltd
+---
 
-https://raajmandale.in
+## ⚖️ System Comparison
 
-📄 License
+Backup → needs restore  
+RAID → limited scope  
+Recovery tools → uncertain  
 
-MIT License
+XPADI → deterministic survivability  
 
-Final Statement
+---
 
-XPADI is not a backup system.
-XPADI is not a recovery tool.
-XPADI is a proof that data can survive disruption itself.
+## 🔮 Strategic Direction
+
+Past  
+- deletion  
+- disk failure  
+- corruption  
+
+Present  
+- survivability proof  
+- deterministic reconstruction  
+- integrity validation  
+
+Future  
+- AI-native memory  
+- advanced storage  
+- survivability-first systems  
+
+---
+
+## 📄 Research Paper
+
+https://zenodo.org/records/19500143  
+
+---
+
+## 👤 Author
+
+Raaj Mandale  
+Founder — ERANEST Technoware Pvt Ltd  
+
+https://raajmandale.in  
+
+---
+
+## 📄 License
+
+MIT License  
+
+---
+
+## Final Statement
+
+XPADI is not a backup system.  
+It is not a recovery tool.  
+It is a proof that data can survive disruption itself.
