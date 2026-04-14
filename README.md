@@ -108,6 +108,8 @@ It is centered on **survivability outcome**.
 
 Get XPADI running in less than a minute.
 
+---
+
 ### 1. Clone the repository
 
 ```bash
@@ -119,7 +121,7 @@ pip install -r requirements.txt
 python run.py
 4. Open the interface
 http://127.0.0.1:8000
-Example Output
+🧪 Example Output
 [SAFE MODE] Original file protected
 
 Creating internal proof state...
@@ -164,23 +166,23 @@ This is not a theoretical system.
 XPADI demonstrates:
 
 Original data remains untouched
-Disruption occurs on derived state only
+Attack is applied only on protected state
 Reconstruction is deterministic
 Integrity is verified using hashing
-Final outcome survives attack conditions
+Final outcome survives disruption
 ⚙️ Execution Model
 
 XPADI operates in Safe Mode Simulation:
 
 Source is sealed
 Internal survivability state is generated
-Attack is applied to internal state only
-Reconstruction resolves the data
-Output is verified against original
+Attack is applied internally
+Reconstruction resolves data
+Output is verified
 📊 Output Guarantee
 hash(original) == hash(reconstructed)
 
-If this condition holds:
+If true:
 
 ATTACK ≠ DATA LOSS
 
@@ -200,9 +202,9 @@ XPADI_Proof_Engine_V1/
 └── README.md
 ⚖️ System Comparison
 System	Focus	Limitation
-Backup	Copy	Requires restore
-RAID	Hardware redundancy	Limited failure scope
-Recovery Tools	Reconstruction	Uncertain outcome
+Backup	Copy	Needs restore
+RAID	Hardware redundancy	Limited scope
+Recovery Tools	Reconstruction	Uncertain
 XPADI	Survivability logic	Deterministic proof
 🔮 Strategic Direction
 Past
@@ -215,7 +217,7 @@ deterministic reconstruction
 integrity validation
 Future
 AI-native memory systems
-advanced storage paradigms
+advanced storage models
 survivability-first architectures
 📄 Research Paper
 
@@ -235,5 +237,5 @@ MIT License
 Final Statement
 
 XPADI is not a backup system.
-It is not a recovery tool.
-It is a proof that data can survive disruption itself.
+XPADI is not a recovery tool.
+XPADI is a proof that data can survive disruption itself.
