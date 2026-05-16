@@ -55,12 +55,12 @@
 ---
 ### 🌐 Related Runtime Surfaces
 
-| Surface | Purpose |
-|---|---|
-| XPADI-SGDS | Canonical SGDS ecosystem root |
-| XPADI Proof Engine | Runtime continuity reactor |
-| XPADI-ProofCheck | Recovery intelligence surface |
-| Research Paper | SGDS architecture & theory |
+| Surface | Purpose | Link |
+|---|---|---|
+| XPADI-SGDS | Canonical SGDS ecosystem root | https://github.com/raajmandale/XPADI-SGDS |
+| XPADI Proof Engine | Runtime continuity reactor | https://raajmandale.github.io/XPADI_Proof_Engine_V1/ |
+| XPADI-ProofCheck | Recovery intelligence surface | https://xpadi.com/proofcheck/ |
+| Research Paper | SGDS architecture & theory | https://zenodo.org/records/19500143 |
 ---
 ## 🧠 What is XPADI
 
