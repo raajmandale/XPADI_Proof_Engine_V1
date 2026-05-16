@@ -2,36 +2,43 @@
   <img src="./assets/banner.svg" width="1000" alt="XPADI Banner">
 </p>
 
-<h1 align="center">XPADI</h1>
+<h1 align="center">XPADI Proof Engine</h1>
 
 <p align="center">
-  <b>Survivability Proof Engine</b><br>
-  Outcome-preserving data systems across attack, failure, and unknown states
+  <b>Survivability-Governed Data Systems (SGDS)</b><br>
+  Runtime continuity • deterministic reconstruction • survivability proof
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/status-proof--engine-blue?style=for-the-badge" alt="status">
+  <img src="https://img.shields.io/badge/status-runtime--active-0A84FF?style=for-the-badge" alt="status">
   <img src="https://img.shields.io/badge/system-SGDS-green?style=for-the-badge" alt="system">
-  <img src="https://img.shields.io/badge/mode-safe--simulation-purple?style=for-the-badge" alt="mode">
-  <img src="https://img.shields.io/badge/version-v1-orange?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/runtime-live--reactor-purple?style=for-the-badge" alt="runtime">
+  <img src="https://img.shields.io/badge/mode-public--safe-orange?style=for-the-badge" alt="mode">
 </p>
 
 <p align="center">
-  <a href="#-60-second-quickstart">
-    <img src="https://img.shields.io/badge/Run-Locally-black?style=for-the-badge&logo=terminal" alt="Run Locally">
-  </a>
-  <a href="./docs/index.html">
-    <img src="https://img.shields.io/badge/View-Command_UI-0A84FF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="View Command UI">
-  </a>
-  <a href="https://zenodo.org/records/19500143">
-    <img src="https://img.shields.io/badge/Read-Research_Paper-7A1CAC?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Research Paper">
-  </a>
+
+<a href="https://raajmandale.github.io/XPADI_Proof_Engine_V1/">
+  <img src="https://img.shields.io/badge/OPEN-LIVE_REACTOR-00C2FF?style=for-the-badge&logo=googlechrome&logoColor=white">
+</a>
+
+<a href="https://github.com/raajmandale/XPADI-SGDS">
+  <img src="https://img.shields.io/badge/VIEW-SGDS_ROOT-111111?style=for-the-badge&logo=github&logoColor=white">
+</a>
+
+<a href="https://github.com/raajmandale/XPADI-ProofCheck">
+  <img src="https://img.shields.io/badge/OPEN-PROOFCHECK-1B5E20?style=for-the-badge&logo=github&logoColor=white">
+</a>
+
+<a href="https://zenodo.org/records/19500143">
+  <img src="https://img.shields.io/badge/READ-RESEARCH_PAPER-7A1CAC?style=for-the-badge&logo=readthedocs&logoColor=white">
+</a>
+
 </p>
 
 <p align="center">
-  <b>ATTACK / DELETION / CORRUPTION ≠ PERMANENT DATA LOSS</b>
+  <b>ATTACK / DELETION / FAILURE ≠ PERMANENT DATA LOSS</b>
 </p>
-
 ---
 
 ## ⚡ 2040 Command UI Preview
