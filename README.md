@@ -39,9 +39,9 @@
 <p align="center">
   <b>ATTACK / DELETION / FAILURE ≠ PERMANENT DATA LOSS</b>
 </p>
----
 
-## ⚡ 2040 Command UI Preview
+---
+### ⚡ Command UI Preview
 
 <p align="center">
   <img src="./assets/xpadi-ui-preview.gif" width="1000" alt="XPADI 2040 Command UI Preview">
@@ -53,11 +53,18 @@
 </p>
 
 ---
+### 🌐 Related Runtime Surfaces
 
+| Surface | Purpose |
+|---|---|
+| XPADI-SGDS | Canonical SGDS ecosystem root |
+| XPADI Proof Engine | Runtime continuity reactor |
+| XPADI-ProofCheck | Recovery intelligence surface |
+| Research Paper | SGDS architecture & theory |
+---
 ## 🧠 What is XPADI
 
-XPADI is a **Survivability-Governed Data System (SGDS)**.
-
+# XPADI is a **Survivability-Governed Data System (SGDS)**.
 It does not focus on storage first.  
 It focuses on **outcome continuity**.
 
@@ -70,7 +77,6 @@ XPADI asks:
 > Can data survive disruption itself?
 
 ---
-
 ## 🚨 Why This Matters
 
 Modern data systems still break at the wrong moment:
@@ -88,7 +94,6 @@ XPADI introduces a different model:
 - ✅ failure-resilient data state
 
 ---
-
 ## 📊 System Snapshot
 
 | Signal | State |
@@ -99,8 +104,7 @@ XPADI introduces a different model:
 | Integrity Drift | 0.00% |
 
 ---
-
-## 🌐 System Positioning
+### 🌐 System Positioning
 
 XPADI sits above ordinary storage behavior and focuses on the one thing most systems do not prove clearly:
 
